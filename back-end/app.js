@@ -1,6 +1,7 @@
 // DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
+const metaController = require("./controllers/metaController");
 
 // CONFIGURATION
 const app = express();
@@ -13,6 +14,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("META MMA");
 });
+
+app.use("/meta", metaController);
 
 // EXPORT
 module.exports = app;
