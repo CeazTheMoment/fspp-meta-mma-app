@@ -1,3 +1,18 @@
+// const devConnection = {
+//   host: process.env.DB_HOST,
+//   port: process.env.DB_PORT,
+//   database: process.env.DB_NAME,
+//   user: process.env.DB_USER,
+// };
+
+// const prodConnection = {
+//   connectionString: process.env.DATABASE_URL,
+//   max: 30,
+//   ssl: {
+//     rejectUnauthorized: false,
+//   },
+// };
+
 // http://vitaly-t.github.io/pg-promise/module-pg-promise.html
 const pgp = require("pg-promise")();
 require("dotenv").config();
@@ -22,6 +37,7 @@ const cn = DATABASE_URL
 // alt from express docs
 // var db = pgp('postgres://username:password@host:port/database')
 
+// const db = pgp(process.env.DATABASE_URL ? prodConnection : devConnection);
 const db = pgp(cn);
 
 module.exports = db;
