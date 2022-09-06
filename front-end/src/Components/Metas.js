@@ -11,7 +11,7 @@ function Metas() {
       .then((response) => {
         setMetas(response.data.payload);
       })
-      .catch((error) => console.warn(error));
+      .catch((error) => console.log(error));
   }, []);
 
   return (
