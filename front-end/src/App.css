@@ -2,37 +2,103 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  background-color:rgb(57, 243, 57);
+  height: 200;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.newPound,.newHome,.newMma{
+  font-size: 32px;
+  text-decoration: none;
+  margin:auto;
+}
+.newPound:hover,.newHome:hover,.newMma:hover{
+  color: rgb(170, 7, 26)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.homePage{
+  background-image: url("https://i.ibb.co/BNH98s7/mmaMeta.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height:1000px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* #metamma {
+  padding-left: 100px;
+  padding-right: 400px;
+} */
+
+.helloMessage{
+  text-align: center;
+  color: grey;
+  line-height: 1;
+  text-shadow: 2px 2px blue;
+  font-size: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.Index {
+background-image: url("https://i.ibb.co/BNH98s7/mmaMeta.gif");
+background-size: contain;
+background-repeat: no-repeat;
+height:1000px;
+font-size: 50px;
+color: blue;
+text-shadow: 2px 2px red;
+line-height: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.New {
+  background-image: url("https://i.ibb.co/BNH98s7/mmaMeta.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height:1000px;
+}
+
+/* .Newform {
+  background-image: url("https://i.ibb.co/BNH98s7/mmaMeta.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height:1000px;
+  width: 600px;
+  margin:0 auto;
+  padding-left: 100px;
+} */
+
+.form {
+  width: 100px;
+  margin:0 auto;
+  padding-left: 100px;
+}
+
+input {
+  width: 250px;
+  font-size: 30px;
+  color:blue;
+}
+
+
+.Nav {
+  text-decoration: none;
+  color: rgb(234, 7, 204);
+  font-size: xx-large;
+  margin-left: 50px;
+}
+
+
+tbody {
+  display:grid;
+  grid-template-columns: 250px 270px 290px 310px;
+  grid-template-rows: 100px 100px 100px 100px;
+  text-align: center;
+  color:rgb(244, 6, 26);
+  line-height: 10;
+  text-shadow: 1px 1px rgb(1, 0, 5);
+  font-size: large;
+}
+
+.New {
+  color: blue;
+  text-shadow: 1px 1px red;
+  line-height: 1;
 }
