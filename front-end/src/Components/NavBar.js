@@ -16,7 +16,7 @@ export default function NavBar() {
         </div>
       </h1>
       <Link to="/meta" className="newPound">
-        Pound for Pound the best MMA fighters in the World
+        Best MMA Fighters In The World
       </Link>
       <Link to="/" className="newHome">
         Home

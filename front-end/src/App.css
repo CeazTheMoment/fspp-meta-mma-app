@@ -13,9 +13,16 @@ nav {
   text-decoration: none;
   margin:auto;
 }
-.newPound:hover,.newHome:hover,.newMma:hover{
+.newPound:hover,.newHome:hover,.newMma:hover,newUfc:hover{
   color: rgb(170, 7, 26)
 }
+/* .newUfc {
+  font-size: 52px;
+  text-decoration: none;
+  margin:auto;
+  padding-right: 100px;
+  background-color: black;
+} */
 
 .homePage{
   background-image: url("https://i.ibb.co/BNH98s7/mmaMeta.gif");
@@ -55,15 +62,12 @@ line-height: 1;
   height:1000px;
 }
 
-/* .Newform {
-  background-image: url("https://i.ibb.co/BNH98s7/mmaMeta.gif");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height:1000px;
-  width: 600px;
+.Newform {
+  width: 250px;
   margin:0 auto;
   padding-left: 100px;
-} */
+  padding: 10px;
+}
 
 .form {
   width: 100px;
@@ -89,10 +93,9 @@ input {
 tbody {
   display:grid;
   grid-template-columns: 250px 270px 290px 310px;
-  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-rows: 120px 120px 120px 100px;
   text-align: center;
   color:rgb(244, 6, 26);
-  line-height: 10;
   text-shadow: 1px 1px rgb(1, 0, 5);
   font-size: large;
 }
@@ -101,4 +104,29 @@ tbody {
   color: blue;
   text-shadow: 1px 1px red;
   line-height: 1;
+}
+
+h6 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+/* .NavLogo {
+  height: 180px;
+} */
+
+/* #mmmMeta {
+  width: 300px;
+  padding-inline-end: 100px;
+  ;
+} */
+
+.metaImage {
+  width: 30%;
+  display:block;
+  margin: auto;
+  
 }

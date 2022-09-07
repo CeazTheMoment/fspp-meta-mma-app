@@ -35,19 +35,19 @@ function MetaDetail() {
 
         <img src={meta.image} alt={meta.name} />
 
-        <h6>Wins:{meta.wins}</h6>
+        <h6>Wins: {meta.wins}</h6>
 
-        <h6>Loss:{meta.loss}</h6>
+        <h6>Loss: {meta.loss}</h6>
 
-        <h6>Age:{meta.age}</h6>
+        <h6>Age: {meta.age}</h6>
 
-        <h6>Height:{meta.height}</h6>
+        <h6>Height: {meta.height}</h6>
 
-        <h6>Weight:{meta.weight}</h6>
+        <h6>Weight: {meta.weight}</h6>
 
-        <h6>Reach:{meta.reach}</h6>
+        <h6>Reach: {meta.reach}</h6>
 
-        <h6>Born:{meta.born}</h6>
+        <h6>Born: {meta.born}</h6>
 
         <div className="metaDetails">
           <div>
