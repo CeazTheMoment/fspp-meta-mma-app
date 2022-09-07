@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const API = process.env.REACT_APP_API_URL;
 
 function MetaForm() {
@@ -28,9 +29,9 @@ function MetaForm() {
 
   const addMeta = (newMeta) => {
     axios
-      .post(`${API}/metas/`, newMeta)
+      .post(`${API}/meta`, newMeta)
       .then(() => {
-        navigate(`/metas`);
+        navigate(`/meta`);
       })
       .catch((error) => {
         console.warn("error");
@@ -112,7 +113,16 @@ function MetaForm() {
           onChange={handleTextChange}
           required
         />
-        <input type="submit" />
+        {/* <input type="submit" /> */}
+        {/* <button type="submit">Submit</button>
+        <Link to={`/meta`}>
+          <button>Back</button>
+        </Link> */}
+
+        <button type="submit">Submit</button>
+        <Link to={`/meta`}>
+          <button>Back</button>
+        </Link>
       </form>
     </div>
   );
