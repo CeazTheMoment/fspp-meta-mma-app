@@ -113,12 +113,6 @@ function MetaForm() {
           onChange={handleTextChange}
           required
         />
-        {/* <input type="submit" /> */}
-        {/* <button type="submit">Submit</button>
-        <Link to={`/meta`}>
-          <button>Back</button>
-        </Link> */}
-
         <button type="submit">Submit</button>
         <Link to={`/meta`}>
           <button>Back</button>
