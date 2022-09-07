@@ -1,10 +1,10 @@
-import MetaForm from "../Components/MetaForm";
+import MetaEdit from "../Components/MetaEdit";
 
 function Edit() {
   return (
     <div>
       <h2>Edit Your Fighter</h2>
-      <MetaForm />
+      <MetaEdit />
     </div>
   );
 }

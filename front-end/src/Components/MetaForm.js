@@ -5,7 +5,7 @@ const API = process.env.REACT_APP_API_URL;
 
 function MetaForm() {
   const navigate = useNavigate();
-  const [meta, setMeta] = useState({
+  const [newMeta, setMeta] = useState({
     name: "",
     wins: "",
     loss: "",
@@ -18,19 +18,19 @@ function MetaForm() {
   });
 
   const handleTextChange = (event) => {
-    setMeta({ ...meta, [event.target.id]: event.target.value });
+    setMeta({ ...newMeta, [event.target.id]: event.target.value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addMeta(meta);
+    addMeta(newMeta);
   };
 
   const addMeta = (newMeta) => {
     axios
-      .post(`${API}/meta`, newMeta)
+      .post(`${API}/metas/`, newMeta)
       .then(() => {
-        navigate(`/meta`);
+        navigate(`/metas`);
       })
       .catch((error) => {
         console.warn("error");
@@ -43,7 +43,7 @@ function MetaForm() {
         <label htmlFor="name">Name:</label>
         <input
           id="name"
-          value={meta.name}
+          value={newMeta.name}
           type="text"
           onChange={handleTextChange}
           required
@@ -51,48 +51,48 @@ function MetaForm() {
         <label htmlFor="wins">WINS:</label>
         <input
           id="wins"
-          type="text"
-          value={meta.wins}
+          type="number"
+          value={newMeta.wins}
           onChange={handleTextChange}
           required
         />
         <label htmlFor="loss">LOSS:</label>
         <input
           id="loss"
-          type="text"
-          value={meta.loss}
+          type="number"
+          value={newMeta.loss}
           onChange={handleTextChange}
           required
         />
         <label htmlFor="age">AGE:</label>
         <input
           id="age"
-          type="text"
-          value={meta.age}
+          type="number"
+          value={newMeta.age}
           onChange={handleTextChange}
           required
         />
         <label htmlFor="height">HEIGHT:</label>
         <input
           id="height"
-          type="text"
-          value={meta.height}
+          type="number"
+          value={newMeta.height}
           onChange={handleTextChange}
           required
         />
         <label htmlFor="weight">WEIGHT:</label>
         <input
           id="weight"
-          type="text"
-          value={meta.weight}
+          type="number"
+          value={newMeta.weight}
           onChange={handleTextChange}
           required
         />
         <label htmlFor="reach">REACH:</label>
         <input
           id="reach"
-          type="text"
-          value={meta.reach}
+          type="number"
+          value={newMeta.reach}
           onChange={handleTextChange}
           required
         />
@@ -100,7 +100,7 @@ function MetaForm() {
         <input
           id="born"
           type="text"
-          value={meta.born}
+          value={newMeta.born}
           onChange={handleTextChange}
           required
         />
@@ -108,7 +108,7 @@ function MetaForm() {
         <input
           id="image"
           type="text"
-          value={meta.image}
+          value={newMeta.image}
           onChange={handleTextChange}
           required
         />

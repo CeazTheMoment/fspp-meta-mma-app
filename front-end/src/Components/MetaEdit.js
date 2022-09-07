@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const API = process.env.REACT_APP_API_URL;
 
 function MetaEdit() {
@@ -18,15 +19,6 @@ function MetaEdit() {
     born: "",
     image: "",
   });
-
-  const handleTextChange = (event) => {
-    setMeta({ ...meta, [event.target.id]: event.target.value });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    updateMeta(meta);
-  };
 
   const updateMeta = (meta) => {
     axios
@@ -49,6 +41,15 @@ function MetaEdit() {
         console.warn("error");
       });
   }, [id]);
+
+  const handleTextChange = (event) => {
+    setMeta({ ...meta, [event.target.id]: event.target.value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    updateMeta(meta);
+  };
 
   return (
     <div className="Newform">
@@ -89,7 +90,7 @@ function MetaEdit() {
         <input
           id="height"
           value={meta.height}
-          type="text"
+          type="number"
           onChange={handleTextChange}
           required
         />
@@ -112,7 +113,7 @@ function MetaEdit() {
         <label htmlFor="born">Born:</label>
         <input
           id="born"
-          type="number"
+          type="text"
           value={meta.born}
           onChange={handleTextChange}
           required
@@ -129,7 +130,7 @@ function MetaEdit() {
 
         <button type="submit">Submit</button>
       </form>
-      <Link to={`/metas/${id}`}>
+      <Link to={`/meta/${id}`}>
         <button>Back</button>
       </Link>
     </div>
