@@ -2,8 +2,8 @@
 
 This is a MMA App -
 
-[Deployed API Server]()
-[Deployed Frontend]()
+[Deployed API Server](https://damp-shore-75870.herokuapp.com)
+[Deployed Frontend](https://splendid-sundae-c41fe7.netlify.app)
 [Trello]()
 [ERD]()
 [WireFrames]()
